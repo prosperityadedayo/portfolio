@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>Prosperity Adedayo | Web Developer & Portfolio</title>
+  <meta name="description" content="Prosperity Adedayo is a web developer specializing in responsive websites, web applications, and modern UI/UX. View projects, skills, and contact details." />
+  <meta name="keywords" content="Prosperity Adedayo, web developer, website developer, frontend developer, full stack developer, portfolio, Nigeria web developer" />
+  <meta name="author" content="Prosperity Adedayo" />
+
+  <!-- Canonical (update URL after GitHub Pages setup) -->
+  <link rel="canonical" href="https://prosperityadedayo.github.io/portfolio" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Prosperity Adedayo | Web Developer" />
+  <meta property="og:description" content="Web developer portfolio showcasing projects, skills, and professional experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prosperityadedayo.github.io/portfolio/" />
+  <meta property="og:image" content="https://prosperityadedayo.github.io/portfolio/assets/img/hero-placeholder2.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prosperity Adedayo | Web Developer" />
+  <meta name="twitter:description" content="Personal portfolio of Prosperity Adedayo, web developer." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- NAVBAR (shared) -->
+   <header>
+    <nav class="navbar site-navbar navbar-expand-lg py-3 navbar-light border-bottom" aria-label="Main navigation">
+        <div class="container">
+        <!-- BRAND -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="brand-mark" aria-hidden="true">PA</span>
+            <span class="brand-text">
+            <strong>Prosperity</strong> Adedayo
+            <small class="d-block text-muted">Full-stack developer</small>
+            </span>
+        </a>
+
+        <!-- DESKTOP LINKS -->
+        <div class="d-none d-lg-flex align-items-center ms-auto gap-3">
+            <ul class="navbar-nav d-flex flex-row align-items-center gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
+
+            <a class="btn btn-sm btn-primary ms-2" href="contact.html">Work With me</a>
+
+            <!-- theme toggle (desktop) -->
+            <button id="theme-toggle" class="btn btn-ghost ms-2" aria-label="Toggle theme" data-theme-toggle>
+            <span class="theme-icon" aria-hidden="true">🌓</span>
+            </button>
+        </div>
+
+        <!-- MOBILE TOGGLE -->
+        <div class="d-lg-none ms-auto">
+            <button id="mobile-toggle" class="btn btn-ghost" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+            <!-- simple hamburger -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            </button>
+        </div>
+        </div>
+    </nav>
+
+    <!-- Mobile floating glass sidebar + overlay -->
+    <div id="mobileOverlay" class="mobile-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <aside id="mobileMenu" class="mobile-sidebar" aria-hidden="true" role="dialog" aria-label="Mobile menu">
+        <div class="mobile-header d-flex align-items-center justify-content-between mb-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="brand-mark" aria-hidden="true">PA</span>
+            <span class="brand-text">
+            <strong>Prosperity</strong>
+            </span>
+        </a>
+        <button id="mobile-close" class="btn btn-ghost" aria-label="Close menu">✕</button>
+        </div>
+
+        <nav>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        </ul>
+
+        <div class="mt-3 d-flex gap-2">
+            <a class="btn btn-primary w-100" href="contact.html">Work With Me</a>
+            <button id="mobile-theme-toggle" class="btn btn-ghost" aria-label="Toggle theme" data-theme-toggle>
+            <span class="theme-icon" aria-hidden="true">🌓</span>
+            </button>
+        </div>
+        </nav>
+    </aside>
+    </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- About Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-5 mb-3">About <span class="accent">Me</span></h1>
+            <p class="lead text-muted">
+              Hello! I’m <strong>Prosperity Adedayo</strong>, a passionate and versatile 
+              <strong>web developer</strong> and <strong>Computer Science student</strong>.  
+              I specialize in building clean, user-friendly, and visually appealing websites using 
+              <strong>HTML, CSS, JavaScript, Django, and Python</strong>, with growing expertise in 
+              <strong>Bootstrap, Tailwind, React, and Node.js</strong>.  
+            </p>
+            <p class="lead text-muted">
+              Beyond the code, I enjoy turning ideas into practical solutions — from attendance systems 
+              to accounting apps — with the goal of becoming a skilled full-stack developer ready 
+              for remote opportunities worldwide.  
+            </p>
+            <a href="projects.html" class="btn btn-primary mt-3 px-4 py-2 rounded-pill shadow">
+              View My Projects
+            </a>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="hero-figure mx-auto" role="img" aria-label="Portrait placeholder">
+              <img src="assets/img/hero-placeholder2.png" alt="Prosperity portrait" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech" class="section-padding border-top">
+      <div class="container">
+        <h2 class="mb-4">Tech Stack</h2>
+        <div class="row g-3">
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">HTML</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">CSS</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">JavaScript</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">Bootstrap</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">Python</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">Flask</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">Django</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">MySQL</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">WordPress</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">Java</div></div>
+          <div class="col-6 col-sm-4 col-md-3"><div class="card p-3 text-center shadow-sm">Figma</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Showcase -->
+    <section class="section-padding border-top">
+      <div class="container">
+        <h2 class="mb-4">Skills Showcase</h2>
+        <div class="mb-3">
+          <p class="mb-1">Frontend Development</p>
+          <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-primary" style="width:90%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <p class="mb-1">Backend Development</p>
+          <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-primary" style="width:90%"></div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <p class="mb-1">Database Management</p>
+          <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-primary" style="width:80%"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">UI/UX Design</p>
+          <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-primary" style="width:85%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section-padding border-top">
+      <div class="container">
+        <h2 class="mb-4">Achievements & Certifications</h2>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-award me-2 text-primary"></i>I4G & Cisco Cybersecurity Certification</li>
+          <li class="mb-2"><i class="fas fa-award me-2 text-primary"></i>Cisco Hardware Basics Certification</li>
+          <li class="mb-2"><i class="fas fa-award me-2 text-primary"></i>RCCG CSR WordPress Website Design Training</li>
+          <li class="mb-2"><i class="fas fa-award me-2 text-primary"></i>Cisco Data Analysis Essentials</li>
+          <li class="mb-2"><i class="fas fa-award me-2 text-primary"></i>Cisco Python Certification (Level 1 & 2)</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (shared) -->
+  <footer class="site-footer py-4 mt-5 border-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small text-muted">© <span id="year"></span> Prosperity Adedayo</div>
+      <div class="socials d-flex gap-2">
+        <a href="https://github.com/prosperityadedayo" class="btn btn-sm" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/prosperity-adedayo-a26970363/" class="btn btn-sm" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100088313618683/" class="btn btn-sm" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle (for collapse & small JS utilities) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Main JS (theme toggle, little helpers) -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

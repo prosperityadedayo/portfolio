@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>Prosperity Adedayo | Web Developer & Portfolio</title>
+  <meta name="description" content="Prosperity Adedayo is a web developer specializing in responsive websites, web applications, and modern UI/UX. View projects, skills, and contact details." />
+  <meta name="keywords" content="Prosperity Adedayo, web developer, website developer, frontend developer, full stack developer, portfolio, Nigeria web developer" />
+  <meta name="author" content="Prosperity Adedayo" />
+
+  <!-- Canonical (update URL after GitHub Pages setup) -->
+  <link rel="canonical" href="https://prosperityadedayo.github.io/portfolio" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Prosperity Adedayo | Web Developer" />
+  <meta property="og:description" content="Web developer portfolio showcasing projects, skills, and professional experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prosperityadedayo.github.io/portfolio/" />
+  <meta property="og:image" content="https://prosperityadedayo.github.io/portfolio/assets/img/hero-placeholder2.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prosperity Adedayo | Web Developer" />
+  <meta name="twitter:description" content="Personal portfolio of Prosperity Adedayo, web developer." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- NAVBAR (shared) -->
+  <header>
+    <nav class="navbar site-navbar navbar-expand-lg py-3 navbar-light border-bottom" aria-label="Main navigation">
+      <div class="container">
+        <!-- BRAND -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-mark" aria-hidden="true">PA</span>
+          <span class="brand-text">
+            <strong>Prosperity</strong> Adedayo
+            <small class="d-block text-muted">Full-stack developer</small>
+          </span>
+        </a>
+
+        <!-- DESKTOP LINKS -->
+        <div class="d-none d-lg-flex align-items-center ms-auto gap-3">
+          <ul class="navbar-nav d-flex flex-row align-items-center gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          </ul>
+
+          <a class="btn btn-sm btn-primary ms-2" href="contact.html">Work With me</a>
+
+          <!-- theme toggle (desktop) -->
+          <button id="theme-toggle" class="btn btn-ghost ms-2" aria-label="Toggle theme" data-theme-toggle>
+            <span class="theme-icon" aria-hidden="true">🌓</span>
+          </button>
+        </div>
+
+        <!-- MOBILE TOGGLE -->
+        <div class="d-lg-none ms-auto">
+          <button id="mobile-toggle" class="btn btn-ghost" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile floating glass sidebar + overlay -->
+    <div id="mobileOverlay" class="mobile-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <aside id="mobileMenu" class="mobile-sidebar" aria-hidden="true" role="dialog" aria-label="Mobile menu">
+      <div class="mobile-header d-flex align-items-center justify-content-between mb-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-mark" aria-hidden="true">PA</span>
+          <span class="brand-text">
+            <strong>Prosperity</strong>
+          </span>
+        </a>
+        <button id="mobile-close" class="btn btn-ghost" aria-label="Close menu">✕</button>
+      </div>
+
+      <nav>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        </ul>
+
+        <div class="mt-3 d-flex gap-2">
+          <a class="btn btn-primary w-100" href="contact.html">Work With Me</a>
+          <button id="mobile-theme-toggle" class="btn btn-ghost" aria-label="Toggle theme" data-theme-toggle>
+            <span class="theme-icon" aria-hidden="true">🌓</span>
+          </button>
+        </div>
+      </nav>
+    </aside>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Professional Projects -->
+    <section class="section-padding">
+      <div class="container">
+        <h2 class="mb-4">Professional Projects</h2>
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/edmackweb.png" class="card-img-top" alt="Business Website screenshot">
+              <div class="card-body">
+                <h5 class="card-title">EDMACK Website</h5>
+                <p class="card-text text-muted small">
+                  Developed for Gain Infinity to provide EDMACK Group a modern web presence. 
+                  Streamlines their services display and client engagement online.
+                </p>
+                <p class="small"><strong>Tech:</strong> HTML, CSS, JS</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://edmackgroup.com">View Live</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/ecommercewebapp.png" class="card-img-top" alt="E-commerce Platform screenshot">
+              <div class="card-body">
+                <h5 class="card-title">E-commerce Platform</h5>
+                <p class="card-text text-muted small">
+                  Built to help small businesses sell online. Includes product catalog, shopping cart, and order tracking. Solves the problem of reaching customers digitally.
+                </p>
+                <p class="small"><strong>Tech:</strong> Flask, MySQL, HTML, CSS, JS</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://github.com/prosperityadedayo/E-commerce_App.git">View Code</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/eleganceinteriorweb.png" class="card-img-top" alt="Interior Decoration Website screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Interior Decoration Website</h5>
+                <p class="card-text text-muted small">
+                  Created for Elegance Interior to showcase furniture and design services online. Helps attract clients by providing a professional digital portfolio.
+                </p>
+                <p class="small"><strong>Tech:</strong> HTML, CSS, JS</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://prosperityadedayo.github.io/EleganceInteriors/">View Live</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/sablesuitemgtapp.png" class="card-img-top" alt="Hotel Management System screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Hotel Management System</h5>
+                <p class="card-text text-muted small">
+                  Developed for Sable Suite to manage bookings, check-ins, and staff operations digitally, reducing manual errors and improving efficiency.
+                </p>
+                <p class="small"><strong>Tech:</strong> Flask, MySQL, HTML, CSS, JS</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://github.com/prosperityadedayo/sable-suites.git">View Project</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/prosperityautoweb.png" class="card-img-top" alt="Car Sales Website screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Car Sales Website</h5>
+                <p class="card-text text-muted small">
+                  A responsive platform for listing and selling cars online. Helps automotive businesses increase visibility and simplify the sales process.
+                </p>
+                <p class="small"><strong>Tech:</strong> HTML, CSS, JS</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://prosperityadedayo.github.io/prosperity_auto/contact.html">View Live</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/perfecteagleweb.png" class="card-img-top" alt="Accounting Website screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Accounting Website</h5>
+                <p class="card-text text-muted small">
+                  Built for Perfect Eagle CBS to provide clients with easy access to services and company information. Optimizes user experience and professionalism online.
+                </p>
+                <p class="small"><strong>Tech:</strong> HTML, CSS, JS</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://prosperityadedayo.github.io/perfect-eagle-complete-business-solution/">View Live</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fun Projects -->
+    <section id="fun" class="section-padding border-top">
+      <div class="container">
+        <h2 class="mb-4">Fun Projects</h2>
+        <div class="row g-4">
+          <!-- Project 7 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/YtDownloader.png" class="card-img-top" alt="YouTube Downloader screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Python YouTube Downloader</h5>
+                <p class="card-text text-muted small">
+                  Allows users to download MP4 videos from YouTube. Built to solve the problem of offline access to educational and entertainment content.
+                </p>
+                <p class="small"><strong>Tech:</strong> Python</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://github.com/prosperityadedayo/YT-downloader-Python.git">View Code</a>
+                <a class="btn btn-sm btn-primary" href="assets/downloads/YTDownloader.zip" download="YT-downloader-Python"><i class="fas fa-download me-1"></i>  Download</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/TicTacToe.png" class="card-img-top" alt="Tic Tac Toe app screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Tic Tac Toe (Java Desktop)</h5>
+                <p class="card-text text-muted small">
+                  Classic Tic Tac Toe game with speech feedback. Built in collaboration with a teammate to explore GUI programming with Java Swing and enhance interactivity.
+                </p>
+                <p class="small"><strong>Tech:</strong> Java, Swing</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://github.com/prosperityadedayo/TictactoeDesktopApp.git">View Code</a>
+              </div>
+            </article>
+          </div>
+
+          
+          <!-- Project 9 -->
+          <div class="col-sm-6 col-lg-4">
+            <article class="card project-card h-100">
+              <img src="assets/img/ProjectScreenshot/musicplayerapp.png" class="card-img-top" alt="Music Player app screenshot">
+              <div class="card-body">
+                <h5 class="card-title">Music Player (Desktop)</h5>
+                <p class="card-text text-muted small">
+                  A desktop music player to play audio files. Built as a fun project to practice Python GUI and multimedia handling.
+                </p>
+                <p class="small"><strong>Tech:</strong> Python</p>
+              </div>
+              <div class="card-footer d-flex gap-2">
+                <a class="btn btn-sm btn-outline-primary" href="https://github.com/prosperityadedayo/python_music_player.git">View Code</a>
+                <a class="btn btn-sm btn-primary" href="assets/downloads/music_player.zip" download="music_player"><i class="fas fa-download me-1"></i>  Download</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (shared) -->
+  <footer class="site-footer py-4 mt-5 border-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small text-muted">© <span id="year"></span> Prosperity Adedayo</div>
+      <div class="socials d-flex gap-2">
+        <a href="https://github.com/prosperityadedayo" class="btn btn-sm" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/prosperity-adedayo-a26970363/" class="btn btn-sm" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100088313618683/" class="btn btn-sm" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js" defer></script>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

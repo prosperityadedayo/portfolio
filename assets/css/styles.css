@@ -1,0 +1,241 @@
+/* styles.css — global styles and theme variables */
+
+/* ---- Theme variables ---- */
+:root{
+  --bg: #ffffff;
+  --card: #ffffff;
+  --text: #0b1221;
+  --muted: #6b7280;
+  --accent: #0066ff;
+  --glass: rgba(255,255,255,0.6);
+  --radius-lg: 20px;
+  --shadow: 0 6px 24px rgba(12, 34, 63, 0.08);
+  --container-max: 1400px;
+  --header-height: 72px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+:root[data-theme="dark"]{
+  --bg: #071022;
+  --card: #091427;
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --accent: #60a5fa;
+  --glass: rgba(255,255,255,0.02);
+  --shadow: 0 8px 28px rgba(1, 6, 15, 0.6);
+}
+
+/* Baseline */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  padding-top: calc(var(--header-height) + 0.5rem);
+  margin:0 ;
+  min-height:100%;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Container adjustments */
+/* .section-padding{padding:1rem 0} */
+.container{max-width:var(--container-max)}
+
+/* Navbar */
+.navbar{
+  background: transparent;
+  transition: background .2s ease;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.navbar-brand { text-decoration: none; color:inherit; }
+.brand-mark{
+  display:inline-flex;
+  width:44px; height:44px; border-radius:10px;
+  align-items:center; justify-content:center;
+  background: linear-gradient(135deg,var(--accent), #7dd3fc33);
+  color:white; font-weight:700;
+  box-shadow:var(--shadow);
+}
+.navbar .nav-link{color:var(--muted)}
+.navbar .nav-link.active, .navbar .nav-link:hover{color:var(--text)}
+
+/* Hero */
+.hero { padding-top:4rem; padding-bottom:4rem; }
+.hero h1{font-weight:700; margin-bottom:.5rem;}
+.hero .lead{font-size:1.05rem}
+.accent{color:var(--accent)}
+
+/* Masked / stylish portrait */
+.hero-figure{
+  width:320px; height:420px; max-width:90%;
+  margin:0 auto;
+  border-radius:28px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+  box-shadow: var(--shadow);
+  transition: transform .4s ease;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 60% 100%, 0 80%);
+}
+.hero-figure img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  transform: scale(1.03);
+  transition: transform .6s ease;
+}
+.hero-figure:hover img{ transform: scale(1.06); }
+
+/* Project cards */
+.project-card{ border:1px solid rgba(0,0,0,0.04); background:var(--card); border-radius:12px; box-shadow:var(--shadow); }
+
+/* Footer */
+.site-footer{ background: transparent; color:var(--muted) }
+
+/* Small utilities and responsive tweaks */
+@media (max-width: 991px){
+  .hero-figure{ margin-top:1rem; }
+}
+@media (max-width: 576px){
+  .hero { padding-top:2rem; padding-bottom:2rem; }
+  .hero h1{font-size:1.6rem}
+}
+
+/* Buttons (ghost style used for theme toggle) */
+.btn-ghost{ background: transparent; border: none; padding: .25rem .5rem; color:var(--muted); }
+.btn-ghost:hover{ color:var(--text); }
+
+/* Accessibility: focus states */
+a:focus, button:focus { outline:3px solid rgba(96,165,250,0.22); outline-offset:2px; }
+
+/* small helpers */
+.text-muted { 
+  color: var(--muted) !important;
+  margin: 5px;
+}
+
+/* ---------- Improved navbar + mobile glass sidebar ---------- */
+
+/* sticky navbar container */
+.site-navbar{
+  position: fixed;          /* keep header always visible */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  padding: .6rem 0;
+  transition: background .28s ease, box-shadow .28s ease, transform .28s ease;
+}
+
+/* when user scrolls — subtle glass background */
+.site-navbar.scrolled{
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(10px) saturate(120%); /* Safari */
+  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: 0 8px 30px rgba(2,8,24,0.18);
+  border-radius: 0 0 12px 12px;
+}
+
+/* nav link refinements */
+.site-navbar .nav-link{
+  color:var(--muted);
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  transition: background .18s ease, color .18s ease, transform .18s;
+  font-weight:500;
+}
+.site-navbar .nav-link:hover{
+  background: rgba(255,255,255,0.03);
+  color:var(--text);
+  text-decoration:none;
+  transform: translateY(-1px);
+}
+.site-navbar .nav-link.active{
+  color:var(--accent);
+  background: linear-gradient(90deg, rgba(96,165,250,0.06), rgba(96,165,250,0.03));
+  box-shadow: 0 4px 18px rgba(2,8,24,0.06);
+}
+
+/* brand tweaks */
+.site-navbar .brand-text { line-height:1; }
+.site-navbar .brand-mark { flex-shrink:0; }
+
+/* mobile floating sidebar (small, glass-like) */
+.mobile-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 1095;
+  display: none;
+  /* overlay left transparent so rest of page remains visible — but it captures clicks */
+  background: transparent;
+}
+.mobile-overlay.visible{ display: block; }
+
+/* floating glass panel */
+.mobile-sidebar{
+  position: fixed;
+  right: 1rem;
+  top: .75rem;
+  width: min(320px, 80vw);
+  height: calc(100vh - 1.5rem);
+  border-radius: 14px;
+  background: var(--glass);
+  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: var(--shadow);
+  transform: translateX(110%);
+  transition: transform .36s cubic-bezier(.2,.9,.3,1);
+  z-index: 1100;
+  padding: 1.1rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* show */
+.mobile-sidebar.open{ transform: translateX(0); }
+
+/* mobile content styles */
+.mobile-sidebar .nav-link{
+  color:var(--text);
+  padding: .6rem 0;
+  border-radius: 8px;
+}
+.mobile-sidebar .nav-link:hover{ background: rgba(255,255,255,0.02); color:var(--accent); }
+
+/* small header inside panel */
+.mobile-header .brand-mark{ width:36px; height:36px; border-radius:9px; font-size:.9rem; }
+
+/* hide the floating panel on larger screens */
+@media (min-width: 992px){
+  .mobile-sidebar, .mobile-overlay{ display:none !important; }
+}
+
+/* hide the desktop nav block on smaller screens (we used d-none/d-lg-flex in HTML) */
+/* keep bootstrap's defaults — we've already used utility classes */
+
+/* small helper to ensure button contrast */
+.btn-ghost{ color:var(--muted); border: none; background: transparent; padding: .25rem .5rem; }
+.btn-ghost:hover{ color:var(--text); background: transparent; }
+
+/* make sure the site-footer sits above mobile menu when open (if needed) */
+.site-footer{ z-index: 1; position: relative; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;  /* vertically center logo and text */
+  gap: 6px;             /* space between logo and text */
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+  display: block;       /* removes extra baseline spacing */
+}
+
+.section-padding {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
