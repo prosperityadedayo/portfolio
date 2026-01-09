@@ -113,6 +113,30 @@
     window.addEventListener('scroll', onScroll);
     onScroll(); // run on load
   });
+
+
+  const text = "I am Prosperity Adedayo";
+  let index = 0;
+  const speed = 120; // typing speed (ms per letter)
+
+  function typeWriter() {
+    if (index < text.length) {
+      document.getElementById("typewriter").textContent += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    } else {
+      // wait 1 second after typing finishes
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = "0";
+        preloader.style.transition = "opacity 0.6s ease";
+        setTimeout(() => preloader.style.display = "none", 300);
+      }, 1000);
+    }
+  }
+
+  window.addEventListener("load", typeWriter);
+
   // ...existing code...
 })();
 
