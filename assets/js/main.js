@@ -135,7 +135,7 @@
     }
   }
 
-  window.addEventListener("load", typeWriter);
+  window.addEventListener("DOMContentLoaded", typeWriter);
 
   // ...existing code...
 })();
